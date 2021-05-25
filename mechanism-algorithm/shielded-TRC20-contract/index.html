@@ -280,7 +280,7 @@
     <li>Shielded TRC-20 Contract</li>
     <li class="wy-breadcrumbs-aside">
       
-        <a href="https://github.com/tronprotocol/documentation-en/edit/master/docs/mechanism-algorithm/shielded-TRC20-contract.md"
+        <a href="https://github.com/liteprotocol/liteprotocol.github.io/edit/master/docs/mechanism-algorithm/shielded-TRC20-contract.md"
           class="icon icon-github"> Edit on GitHub</a>
       
     </li>
@@ -292,7 +292,7 @@
               
                 <h1 id="shielded-trc-20-contract">Shielded TRC-20 Contract<a class="headerlink" href="#shielded-trc-20-contract" title="Permanent link">&para;</a></h1>
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
-<p>TRC-20 token contract allows users to issue and transfer tokens, but it can not guarantee the privacy since it leaks the token ownership. When transferring the token, the source address, destination address, and the token amount are  public. The shielded TRC-20 contract (<a href="https://github.com/tronprotocol/tips/blob/master/tip-135.md">TIP-135</a>) aims to solve this problem and provides users better privacy of token ownership and transactions.</p>
+<p>TRC-20 token contract allows users to issue and transfer tokens, but it can not guarantee the privacy since it leaks the token ownership. When transferring the token, the source address, destination address, and the token amount are  public. The shielded TRC-20 contract (<a href="https://github.com/liteprotocol/tips/blob/master/tip-135.md">TIP-135</a>) aims to solve this problem and provides users better privacy of token ownership and transactions.</p>
 <p>The shielded TRC-20 contract has three core functions: <code>mint</code>, <code>transfer</code> and <code>burn</code>.</p>
 <ul>
 <li><code>mint</code> is used to transform the public TRC-20 token to shielded token, which makes token ownership invisible. <code>mint</code> has only one transparent input and one shielded output.</li>
@@ -306,7 +306,7 @@
 </ol>
 <p>Note: the deployed TRC-20 contract address of <code>TokenTRC20</code> on Nile Testnet is:  <a href="https://nile.tronscan.org/#/contract/TFUD8x3iAZ9dF7NDCGBtSjznemEomE5rP9/code">TFUD8x3iAZ9dF7NDCGBtSjznemEomE5rP9</a>.</p>
 <ol>
-<li>Use the <code>deployContract</code> method to deploy the shielded TRC-20 contract. The shielded TRC-20 contract will bind the TRC-20 contract. The <code>scalingFactor</code> is also specified when deploying the the shielded TRC-20 contract. For more details about <code>scalingFactor</code>, please refer <a href="https://github.com/tronprotocol/tips/blob/master/tip-135.md">TIP-135</a>.</li>
+<li>Use the <code>deployContract</code> method to deploy the shielded TRC-20 contract. The shielded TRC-20 contract will bind the TRC-20 contract. The <code>scalingFactor</code> is also specified when deploying the the shielded TRC-20 contract. For more details about <code>scalingFactor</code>, please refer <a href="https://github.com/liteprotocol/tips/blob/master/tip-135.md">TIP-135</a>.</li>
 </ol>
 <p>Note: the deployed shielded TRC-20 contract address of <code>ShieldedTRC20</code> on Nile Testnet is:  <a href="https://nile.tronscan.org/#/contract/TPcKtz5TRfP4xUZSos81RmXB9K2DBqj2iu/code">TPcKtz5TRfP4xUZSos81RmXB9K2DBqj2iu</a> and the corresponding <code>scalingFactor</code> is set 10.</p>
 <h3 id="usage-guide">Usage Guide<a class="headerlink" href="#usage-guide" title="Permanent link">&para;</a></h3>
@@ -1169,7 +1169,7 @@ Return:
   <div class="rst-versions" role="note" style="cursor: pointer">
     <span class="rst-current-version" data-toggle="rst-current-version">
       
-          <a href="https://github.com/tronprotocol/documentation-en/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+          <a href="https://github.com/liteprotocol/liteprotocol.github.io/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
       

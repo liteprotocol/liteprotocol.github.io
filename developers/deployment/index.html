@@ -312,7 +312,7 @@
     <li>Deployment</li>
     <li class="wy-breadcrumbs-aside">
       
-        <a href="https://github.com/tronprotocol/documentation-en/edit/master/docs/developers/deployment.md"
+        <a href="https://github.com/liteprotocol/liteprotocol.github.io/edit/master/docs/developers/deployment.md"
           class="icon icon-github"> Edit on GitHub</a>
       
     </li>
@@ -333,13 +333,13 @@ New developers should deploy FullNode only.</p>
 /deploy/soliditynode
 </code></pre></div>
 <p>Create two folders for fullnode and soliditynode.</p>
-<p>Clone the latest master branch of <a href="https://github.com/tronprotocol/java-tron">https://github.com/tronprotocol/java-tron</a> and extract it to
+<p>Clone the latest master branch of <a href="https://github.com/liteprotocol/java-tron">https://github.com/liteprotocol/java-tron</a> and extract it to
 <div class="highlight"><pre><span></span><code>/deploy/java-tron
 </code></pre></div></p>
 <p>Make sure you have the proper dependencies.</p>
 <ul>
 <li>JDK 1.8 (JDK 1.9+ is not supported yet)</li>
-<li>On Linux Ubuntu system (e.g. Ubuntu 16.04.4 LTS), ensure that the machine has <a href="https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-get-on-ubuntu-16-04"><strong>Oracle JDK 8</strong></a>, instead of having <strong>Open JDK 8</strong> in the system. If you are building the source code by using <strong>Open JDK 8</strong>, you will get <a href="https://github.com/tronprotocol/java-tron/issues/337"><strong>Build Failed</strong></a> result.</li>
+<li>On Linux Ubuntu system (e.g. Ubuntu 16.04.4 LTS), ensure that the machine has <a href="https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-get-on-ubuntu-16-04"><strong>Oracle JDK 8</strong></a>, instead of having <strong>Open JDK 8</strong> in the system. If you are building the source code by using <strong>Open JDK 8</strong>, you will get <a href="https://github.com/liteprotocol/java-tron/issues/337"><strong>Build Failed</strong></a> result.</li>
 <li>Open <strong>UDP</strong> ports for connection to the network</li>
 <li><strong>MINIMUM</strong> 2 CPU Cores</li>
 </ul>
@@ -349,7 +349,7 @@ New developers should deploy FullNode only.</p>
 ./gradlew build
 </code></pre></div></p>
 <p>2.&nbsp;Copy the FullNode.jar and SolidityNode.jar along with configuration files into the respective directories
-<div class="highlight"><pre><span></span><code>download your needed configuration file from https://github.com/tronprotocol/LiteDeployment.
+<div class="highlight"><pre><span></span><code>download your needed configuration file from https://github.com/liteprotocol/LiteDeployment.
 
 main_net_config.conf is the configuration for MainNet, and test_net_config.conf is the configuration for TestNet.
 
@@ -360,7 +360,7 @@ cp build/libs/FullNode.jar ../fullnode
 cp build/libs/SolidityNode.jar ../soliditynode
 </code></pre></div></p>
 <p>3.&nbsp;You can now run your FullNode using the following command
-<div class="highlight"><pre><span></span><code>java -jar FullNode.jar -c config.conf // make sure that your config.conf is downloaded from https://github.com/tronprotocol/LiteDeployment
+<div class="highlight"><pre><span></span><code>java -jar FullNode.jar -c config.conf // make sure that your config.conf is downloaded from https://github.com/liteprotocol/LiteDeployment
 </code></pre></div></p>
 <p>4.&nbsp;Configure the SolidityNode configuration file</p>
 <p>You need to edit <code>config.conf</code> to connect to your local FullNode. Change  <code>trustNode</code> in <code>node</code> to local <code>127.0.0.1:50051</code>, which is the default rpc port. Set <code>listen.port</code> to any number within the range of 1024-65535. Please don't use any ports between 0-1024 since you'll most likely hit conflicts with other system services. Also change <code>rpc port</code> to <code>50052</code> or something to avoid conflicts. <strong>Please forward the UDP port 18888 for FullNode.</strong>
@@ -369,7 +369,7 @@ cp build/libs/SolidityNode.jar ../soliditynode
     }
 </code></pre></div></p>
 <p>5.&nbsp;You can now run your SolidityNode using the following command：
-<div class="highlight"><pre><span></span><code>java -jar SolidityNode.jar -c config.conf //make sure that your config.conf is downloaded from https://github.com/tronprotocol/LiteDeployment
+<div class="highlight"><pre><span></span><code>java -jar SolidityNode.jar -c config.conf //make sure that your config.conf is downloaded from https://github.com/liteprotocol/LiteDeployment
 </code></pre></div></p>
 <p>6.&nbsp;Running a Super Representative Node for mainnet
 <div class="highlight"><pre><span></span><code>java -jar FullNode.jar -p your private key --witness -c your config.conf(Example：/data/java-tron/config.conf)
@@ -460,10 +460,10 @@ bash deploy_tron.sh --app SolidityNode --rpc-port <span class="m">50041</span>
 <h2 id="grpc-gateway-deployment">Grpc Gateway Deployment<a class="headerlink" href="#grpc-gateway-deployment" title="Permanent link">&para;</a></h2>
 <h3> Summary </h3>
 
-<p>This script helps you download the code from https://github.com/tronprotocol/grpc-gateway and deploy the code on your environment.</p>
+<p>This script helps you download the code from https://github.com/liteprotocol/grpc-gateway and deploy the code on your environment.</p>
 <h3> Pre-requests </h3>
 
-<p>Please follow the guide on https://github.com/tronprotocol/grpc-gateway
+<p>Please follow the guide on https://github.com/liteprotocol/grpc-gateway
 Install Golang, Protoc, and set $GOPATH environment variable according to your requirement.</p>
 <h3> Download and run script </h3>
 
@@ -496,7 +496,7 @@ Use customized configuration：
 <h3> Setup/Build </h3>
 
 <ol>
-<li>Clone the repo <code>git clone https://github.com/tronprotocol/event-plugin.git</code></li>
+<li>Clone the repo <code>git clone https://github.com/liteprotocol/event-plugin.git</code></li>
 <li>Go to eventplugin <code>cd event-plugin</code></li>
 <li>
 <p>run <code>./gradlew build</code></p>
@@ -712,7 +712,7 @@ sh insertIndex.sh</p>
 <h3>Download sourcecode</h3>
 
 <p>Download sourcecode</p>
-<p>git clone https://github.com/tronprotocol/tron-eventquery.git
+<p>git clone https://github.com/liteprotocol/tron-eventquery.git
 cd troneventquery</p>
 <h3> Build </h3>
 
@@ -776,7 +776,7 @@ cd troneventquery</p>
   <div class="rst-versions" role="note" style="cursor: pointer">
     <span class="rst-current-version" data-toggle="rst-current-version">
       
-          <a href="https://github.com/tronprotocol/documentation-en/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+          <a href="https://github.com/liteprotocol/liteprotocol.github.io/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
         <span><a href="../official-public-nodes/" style="color: #fcfcfc;">&laquo; Previous</a></span>

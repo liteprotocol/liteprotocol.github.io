@@ -304,7 +304,7 @@
     <li>Multi-Signature</li>
     <li class="wy-breadcrumbs-aside">
       
-        <a href="https://github.com/tronprotocol/documentation-en/edit/master/docs/mechanism-algorithm/multi-signatures.md"
+        <a href="https://github.com/liteprotocol/liteprotocol.github.io/edit/master/docs/mechanism-algorithm/multi-signatures.md"
           class="icon icon-github"> Edit on GitHub</a>
       
     </li>
@@ -320,7 +320,7 @@
 <p class="admonition-title">Note</p>
 <p><strong>Since v3.5</strong> In the past version, the transactions created in one account can only be signed by one private key, an account can only be managed by one private key. Since V3.5, an account can be managed by several private keys, and the transactions created in one account can be signed by serval private keys.</p>
 </div>
-<p>Reference: <a href="https://github.com/tronprotocol/TIPs/blob/master/tip-16.md">TIP-16: Account Multi-signature</a></p>
+<p>Reference: <a href="https://github.com/liteprotocol/TIPs/blob/master/tip-16.md">TIP-16: Account Multi-signature</a></p>
 <h2 id="concept">Concept<a class="headerlink" href="#concept" title="Permanent link">&para;</a></h2>
 <p>There are three types of permission: owner、witness and active. Owner permission has the right to execute all the contracts. Witness permission is for SR. Active permission contains a set of contracts selected execution permissions.</p>
 <h3 id="protocol-definition">Protocol Definition<a class="headerlink" href="#protocol-definition" title="Permanent link">&para;</a></h3>
@@ -541,13 +541,13 @@ localwitness = [
 </code></pre></div>
 <h3 id="contract-execution">Contract Execution<a class="headerlink" href="#contract-execution" title="Permanent link">&para;</a></h3>
 <p>(1). Create transaction, the same as none multi-signatures</p>
-<p>(2). Specify <code>Permission_id</code>, default 0, represent owner permission, <a href="https://github.com/tronprotocol/wallet-cli/commit/ff9122f2236f1ce19cbb9ba9f0494c8923a3d10c#diff-a63fa7484f62fe1d8fb27276c991a4e3R211">demo</a></p>
+<p>(2). Specify <code>Permission_id</code>, default 0, represent owner permission, <a href="https://github.com/liteprotocol/wallet-cli/commit/ff9122f2236f1ce19cbb9ba9f0494c8923a3d10c#diff-a63fa7484f62fe1d8fb27276c991a4e3R211">demo</a></p>
 <p>(3). User A sign the transaction, and then send it to user B</p>
 <p>(4). User B sign the transaction gets from A, and then send it to user C</p>
 <p>......</p>
 <p>(n). The last users that signs the transaction broadcast it to the node</p>
 <p>(n+1). The node will verify if the sum of the weight of all signatures is bigger than threshold, if true, the transaction is accepted, otherwise, is rejected</p>
-<p>Demo: <a href="https://github.com/tronprotocol/wallet-cli/blob/multi_sign_V2/src/main/java/org/tron/demo/MultiSignDemo.java">MultiSignDemo.java</a></p>
+<p>Demo: <a href="https://github.com/liteprotocol/wallet-cli/blob/multi_sign_V2/src/main/java/org/tron/demo/MultiSignDemo.java">MultiSignDemo.java</a></p>
 <h3 id="other-apis">Other APIs<a class="headerlink" href="#other-apis" title="Permanent link">&para;</a></h3>
 <p>Please refer to <a href="../../api/http/">HTTP API</a> and <a href="../../api/rpc/">RPC API</a> for more information.</p>
 <ol>
@@ -578,7 +578,7 @@ localwitness = [
 <p>Since V3.5, what is the change after a new account is created?</p>
 <p>When to create a new account, an owner permission and active permission will be generated automatically. Owner permission only contains one key, the weight and threshold are both 1. Active permission also contains one key, the weight and threshold are both 1, and operations is "7fff1fc0033e0000000000000000000000000000000000000000000000000000", means it support the execution of all contracts except AccountPermissionUpdateContract.
 After V3.5, if there is a new system contract, the default operations value of the newly created account will change. The operations of existing accounts will not change.</p>
-<p>Please refer to <a href="https://github.com/tronprotocol/wallet-cli/blob/master/README.md">wallet-cli</a> to check the usage of multi-signature.</p>
+<p>Please refer to <a href="https://github.com/liteprotocol/wallet-cli/blob/master/README.md">wallet-cli</a> to check the usage of multi-signature.</p>
 <h2 id="fees">Fees<a class="headerlink" href="#fees" title="Permanent link">&para;</a></h2>
 <p>If you update your account permission, the fee is 100 TRX.</p>
 <p>If a transaction is signed by more than 1 account, the fee is 1 TRX.</p>
@@ -617,7 +617,7 @@ After V3.5, if there is a new system contract, the default operations value of t
   <div class="rst-versions" role="note" style="cursor: pointer">
     <span class="rst-current-version" data-toggle="rst-current-version">
       
-          <a href="https://github.com/tronprotocol/documentation-en/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+          <a href="https://github.com/liteprotocol/liteprotocol.github.io/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
         <span><a href="../dex/" style="color: #fcfcfc;">&laquo; Previous</a></span>
