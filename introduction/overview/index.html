@@ -478,7 +478,7 @@ Recommended requirement:
 CPU: &gt; 64 cores RAM: &gt; 64G, Bandwidth: &gt; 500M, Disk: &gt; 20T</p>
 <h2> 4.4 LITE Network Instructure </h2>
 <p>LITE network uses Peer-to-Peer(P2P) network instructure, all nodes status equal. There are three types of node: SuperNode, FullNode, SolidityNode. SuperNode produces blocks, FullNode synchronizes blocks and broadcasts transactions, SolidityNode synchronizes solidified blocks. Any device that deploy the java-lite code can join LITE network as a node.
-<img alt="image" src="https://raw.githubusercontent.com/tronprotocol/documentation-en/master/images/network.png" /></p>
+<img alt="image" src="https://raw.githubusercontent.com/liteprotocol/documentation-en/master/images/network.png" /></p>
 <h2> 4.5 FullNode and SolidityNode Fast Deployment </h2>
 <p>Download fast deployment script, run the script according to different types of node.
 please refer to <a href="https://github.com/liteprotocol/tron-deployment#deployment-of-soliditynode-on-the-one-host">Node Fast Deployment</a></p>
@@ -526,13 +526,13 @@ command line parameters introduction:
  <logger name="net" level="WARN"/>
  The parameters in configuration file that need to modify:
  localwitness:
- <img alt="image" src="https://raw.githubusercontent.com/tronprotocol/documentation-en/master/images/localwitness.jpg" />
+ <img alt="image" src="https://raw.githubusercontent.com/liteprotocol/documentation-en/master/images/localwitness.jpg" />
  witnesses:
- <img alt="image" src="https://raw.githubusercontent.com/tronprotocol/documentation-en/master/images/witness.png" />
+ <img alt="image" src="https://raw.githubusercontent.com/liteprotocol/documentation-en/master/images/witness.png" />
  version:
- <img alt="image" src="https://raw.githubusercontent.com/tronprotocol/documentation-en/master/images/p2p_version.png" />
+ <img alt="image" src="https://raw.githubusercontent.com/liteprotocol/documentation-en/master/images/p2p_version.png" />
  enable:
- <img alt="image" src="https://raw.githubusercontent.com/tronprotocol/documentation-en/master/images/discovery_enable.png" /></p>
+ <img alt="image" src="https://raw.githubusercontent.com/liteprotocol/documentation-en/master/images/discovery_enable.png" /></p>
 <h6> 4.6.3.2.2 Step 2: FullNode Deployment </h6>
 <p>1.&nbsp;Download private_net_config.conf</p>
 <p><div class="highlight"><pre><span></span><code>wget https://github.com/liteprotocol/tron-deployment/blob/master/private_net_config.conf
@@ -555,26 +555,26 @@ command line parameters introduction:
  <logger name="net" level="WARN"/>
  The parameters in configuration file that need to modify:
  ip.list:
- <img alt="image" src="https://raw.githubusercontent.com/tronprotocol/documentation-en/master/images/ip_list.png" />
+ <img alt="image" src="https://raw.githubusercontent.com/liteprotocol/documentation-en/master/images/ip_list.png" />
  p2p.version:
- <img alt="image" src="https://raw.githubusercontent.com/tronprotocol/documentation-en/master/images/p2p_version.png" />
+ <img alt="image" src="https://raw.githubusercontent.com/liteprotocol/documentation-en/master/images/p2p_version.png" />
  genesis.block:
- <img alt="image" src="https://raw.githubusercontent.com/tronprotocol/documentation-en/master/images/genesis_block.png" />
+ <img alt="image" src="https://raw.githubusercontent.com/liteprotocol/documentation-en/master/images/genesis_block.png" />
  needSyncCheck:
- <img alt="image" src="https://raw.githubusercontent.com/tronprotocol/documentation-en/master/images/need_sync_check.png" />
+ <img alt="image" src="https://raw.githubusercontent.com/liteprotocol/documentation-en/master/images/need_sync_check.png" />
  node.discovery.enable:
- <img alt="image" src="https://raw.githubusercontent.com/tronprotocol/documentation-en/master/images/discovery_enable.png" /></p>
+ <img alt="image" src="https://raw.githubusercontent.com/liteprotocol/documentation-en/master/images/discovery_enable.png" /></p>
 <h2> 4.7 DB Engine </h2>
 <h3> 4.7.1 Rocksdb </h3>
 <h4> 4.7.1.1 Configuration </h4>
 <p>Use rocksdb as the data storage engine, need to set db.engine to "ROCKSDB"
- <img alt="image" src="https://raw.githubusercontent.com/tronprotocol/documentation-en/master/images/db_engine.png" />
+ <img alt="image" src="https://raw.githubusercontent.com/liteprotocol/documentation-en/master/images/db_engine.png" />
  Note: rocksdb only support db.version=2, do not support db.version=1</p>
 <p>The optimization parameters rocksdb support:
- <img alt="image" src="https://raw.githubusercontent.com/tronprotocol/documentation-en/master/images/rocksdb_tuning_parameters.png" /></p>
+ <img alt="image" src="https://raw.githubusercontent.com/liteprotocol/documentation-en/master/images/rocksdb_tuning_parameters.png" /></p>
 <h4> 4.7.1.2 Use rocksdb's data backup function </h4>
 <p>Choose rocksdb to be the data storage engine, you can use it's data backup function while running
- <img alt="image" src="https://raw.githubusercontent.com/tronprotocol/documentation-en/master/images/db_backup.png" />
+ <img alt="image" src="https://raw.githubusercontent.com/liteprotocol/documentation-en/master/images/db_backup.png" />
  Note: FullNode can use data backup function. In order not to affect SuperNode's block producing performance, SuperNode does not support backup service, but SuperNode's backup service node can use this function.</p>
 <h4> 4.7.1.3 Convert leveldb data to rocksdb data </h4>
 <p>The data storage structure of leveldb and rocksdb is not compatible, please make sure the node use the same type of data engine all the time. We provide data conversion script which can convert leveldb data to rocksdb data.</p>
@@ -1085,7 +1085,7 @@ Note: The unit of &#39;amount&#39; is the smallest unit of the token
 3.&nbsp;Bandwidth points from burning TRX, the rate = the number of bytes of the transaction * 10 SUN;</p>
 <h3> 8.2.3 Bandwidth Points Recovery </h3>
 <p>Every 24 hours, the amount of the usage of Bandwidth points of an account will be reset to 0. For the specific formula:
-<img alt="image" src="https://raw.githubusercontent.com/tronprotocol/documentation-en/master/images/bandwidthRestoreEqn.gif" /></p>
+<img alt="image" src="https://raw.githubusercontent.com/liteprotocol/documentation-en/master/images/bandwidthRestoreEqn.gif" /></p>
 <p>Every 24 hours, the amount of the usage of Bandwidth points of an account will be reset to 0.</p>
 <h2> 8.3 Energy </h2>
 <p><a href="#53-energy-introduction">5.3 Energy Introduction</a></p>

@@ -423,7 +423,7 @@ done
 Just Support FullNode and SolidityNode.</p>
 <h3>Download and run script</h3>
 
-<div class="highlight"><pre><span></span><code>wget https://raw.githubusercontent.com/tronprotocol/LiteDeployment/master/deploy_tron.sh -O deploy_tron.sh
+<div class="highlight"><pre><span></span><code>wget https://raw.githubusercontent.com/liteprotocol/LiteDeployment/master/deploy_tron.sh -O deploy_tron.sh
 </code></pre></div>
 <h3>Parameter Illustration</h3>
 
@@ -441,19 +441,19 @@ Just Support FullNode and SolidityNode.</p>
 </code></pre></div>
 <h3> Deployment of FullNode on the one host </h3>
 
-<div class="highlight"><pre><span></span><code>wget https://raw.githubusercontent.com/tronprotocol/LiteDeployment/master/deploy_tron.sh -O deploy_tron.sh
+<div class="highlight"><pre><span></span><code>wget https://raw.githubusercontent.com/liteprotocol/LiteDeployment/master/deploy_tron.sh -O deploy_tron.sh
 bash deploy_tron.sh
 </code></pre></div>
 <h3> Deployment of SolidityNode on the one host </h3>
 
-<div class="highlight"><pre><span></span><code>wget https://raw.githubusercontent.com/tronprotocol/LiteDeployment/master/deploy_tron.sh -O deploy_tron.sh
+<div class="highlight"><pre><span></span><code>wget https://raw.githubusercontent.com/liteprotocol/LiteDeployment/master/deploy_tron.sh -O deploy_tron.sh
 <span class="c1"># User can self-configure the IP and Port of GRPC service in the turst-node field of SolidityNode. trust-node is the fullnode you just deploy.</span>
 bash deploy_tron.sh --app SolidityNode --trust-node &lt;grpc-ip:grpc-port&gt;
 </code></pre></div>
 <h3> Deployment of FullNode and SolidityNode on the same host </h3>
 
 <div class="highlight"><pre><span></span><code><span class="c1"># You need to configure different gRPC ports on the same host because gRPC port is available on SolidityNode and FullNodeConfigure and it cannot be set as default value 50051. In this case the default value of rpc port is set as 50041.</span>
-wget https://raw.githubusercontent.com/tronprotocol/LiteDeployment/master/deploy_tron.sh -O deploy_tron.sh
+wget https://raw.githubusercontent.com/liteprotocol/LiteDeployment/master/deploy_tron.sh -O deploy_tron.sh
 bash deploy_tron.sh --app FullNode
 bash deploy_tron.sh --app SolidityNode --rpc-port <span class="m">50041</span>
 </code></pre></div>
@@ -467,7 +467,7 @@ bash deploy_tron.sh --app SolidityNode --rpc-port <span class="m">50041</span>
 Install Golang, Protoc, and set $GOPATH environment variable according to your requirement.</p>
 <h3> Download and run script </h3>
 
-<div class="highlight"><pre><span></span><code>wget https://raw.githubusercontent.com/tronprotocol/LiteDeployment/master/deploy_grpc_gateway.sh -O deploy_grpc_gateway.sh
+<div class="highlight"><pre><span></span><code>wget https://raw.githubusercontent.com/liteprotocol/LiteDeployment/master/deploy_grpc_gateway.sh -O deploy_grpc_gateway.sh
 </code></pre></div>
 <h3> Parameter Illustration </h3>
 
