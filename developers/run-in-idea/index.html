@@ -163,7 +163,7 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../../contracts/trc20/">TRC-20</a>
+    <a class="" href="../../contracts/lrc20/">LRC-20</a>
                 </li>
     </ul>
 	    </li>
@@ -216,7 +216,7 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../java-tron/">Java-Lite</a>
+    <a class="" href="../java-lite/">Java-Lite</a>
                 </li>
                 <li class="">
                     
@@ -243,7 +243,7 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../../clients/tron-grid/">LiteGrid</a>
+    <a class="" href="../../clients/lite-grid/">LiteGrid</a>
                 </li>
     </ul>
 	    </li>
@@ -310,7 +310,7 @@
               
                 <h1 id="run-the-fullnode-with-idea">Run the FullNode with IDEA<a class="headerlink" href="#run-the-fullnode-with-idea" title="Permanent link">&para;</a></h1>
 <p>This document aims to facilitate developers with some experience to run the FullNode with IDEA.</p>
-<p><strong>The following is for the master branch of java-tron.</strong></p>
+<p><strong>The following is for the master branch of java-lite.</strong></p>
 <h2 id="configure-idea">Configure IDEA<a class="headerlink" href="#configure-idea" title="Permanent link">&para;</a></h2>
 <p><strong>The configuration of IDEA</strong></p>
 <ul>
@@ -332,10 +332,10 @@
 <div class="highlight"><pre><span></span><code>mkdir deploy
 </code></pre></div>
 <p><strong>2.Clone the latest code</strong></p>
-<div class="highlight"><pre><span></span><code>git clone https://github.com/liteprotocol/java-tron
+<div class="highlight"><pre><span></span><code>git clone https://github.com/liteprotocol/java-lite
 </code></pre></div>
 <p><strong>3.Switch to the master branch</strong></p>
-<div class="highlight"><pre><span></span><code>cd java-tron
+<div class="highlight"><pre><span></span><code>cd java-lite
 git checkout -t origin/master
 </code></pre></div>
 <p><strong>4.Compile the code</strong></p>
@@ -348,9 +348,9 @@ If the compilation is successful, you can see the information similar to the fol
 <div class="highlight"><pre><span></span><code>./gradlew build -x test
 </code></pre></div>
 <p><strong>5.Start the FullNode</strong></p>
-<p>After compiling successfully, you can find the main function file through the path java-tron / src / main / java / org / tron / program / FullNode.java and then start a full node.</p>
+<p>After compiling successfully, you can find the main function file through the path java-lite / src / main / java / org / tron / program / FullNode.java and then start a full node.</p>
 <p><img alt="" src="https://raw.githubusercontent.com/cathy-lishipu/documentation-zh/idea_instruction/images/start.png" /></p>
-<p>After starting, you can check the log to verify whether the startup is successful. The log path is: /deploy/java-tron/logs/tron.log. If the startup is successful, you can see the following logs:</p>
+<p>After starting, you can check the log to verify whether the startup is successful. The log path is: /deploy/java-lite/logs/tron.log. If the startup is successful, you can see the following logs:</p>
 <p><img alt="" src="https://raw.githubusercontent.com/cathy-lishipu/documentation-zh/idea_instruction/images/start_success.png" /></p>
 <p>Also,you can use this command like tail -f /logs/tron.log to view the real-time log, as follows:</p>
 <p><img alt="" src="https://raw.githubusercontent.com/cathy-lishipu/documentation-zh/idea_instruction/images/start_successed.png" /></p>

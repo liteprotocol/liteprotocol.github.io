@@ -101,7 +101,7 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://tronprotocol.github.io/documentation-en/contracts/trc20/</loc>
+     <loc>https://tronprotocol.github.io/documentation-en/contracts/lrc20/</loc>
      <lastmod>2021-04-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -141,7 +141,7 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://tronprotocol.github.io/documentation-en/developers/java-tron/</loc>
+     <loc>https://tronprotocol.github.io/documentation-en/developers/java-lite/</loc>
      <lastmod>2021-04-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -166,7 +166,7 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://tronprotocol.github.io/documentation-en/clients/tron-grid/</loc>
+     <loc>https://tronprotocol.github.io/documentation-en/clients/lite-grid/</loc>
      <lastmod>2021-04-14</lastmod>
      <changefreq>daily</changefreq>
     </url>

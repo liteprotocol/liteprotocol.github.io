@@ -163,7 +163,7 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../contracts/trc20/">TRC-20</a>
+    <a class="" href="../contracts/lrc20/">LRC-20</a>
                 </li>
     </ul>
 	    </li>
@@ -202,7 +202,7 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../developers/java-tron/">Java-Lite</a>
+    <a class="" href="../developers/java-lite/">Java-Lite</a>
                 </li>
                 <li class="">
                     
@@ -229,7 +229,7 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../clients/tron-grid/">LiteGrid</a>
+    <a class="" href="../clients/lite-grid/">LiteGrid</a>
                 </li>
     </ul>
 	    </li>
@@ -358,7 +358,7 @@
 </ul>
 </li>
 <li><a href="#compile-and-build">Compile and Build</a><ul>
-<li><a href="#java-tron-build-failed-with-unit-test-issue">java-tron build failed with unit test issue</a></li>
+<li><a href="#java-lite-build-failed-with-unit-test-issue">java-lite build failed with unit test issue</a></li>
 </ul>
 </li>
 <li><a href="#deployment">Deployment</a><ul>
@@ -450,7 +450,7 @@ Note: The addresses of Zion、Sun and Blackhole can not be deleted, but can be m
 </code></pre></div>
 <h3 id="is-there-any-config-file-option-which-i-can-use-for-sending-logs-to-stdout">Is there any config file option, which I can use for sending logs to stdout?<a class="headerlink" href="#is-there-any-config-file-option-which-i-can-use-for-sending-logs-to-stdout" title="Permanent link">&para;</a></h3>
 <p>Steps to send logs to stdout:</p>
-<p>Download <a href="https://github.com/liteprotocol/java-tron/blob/develop/src/main/resources/logback.xml">https://github.com/liteprotocol/java-tron/blob/develop/src/main/resources/logback.xml</a></p>
+<p>Download <a href="https://github.com/liteprotocol/java-lite/blob/develop/src/main/resources/logback.xml">https://github.com/liteprotocol/java-lite/blob/develop/src/main/resources/logback.xml</a></p>
 <p>Uncomment the configuration:</p>
 <p>appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender"</p>
 <p>Go to the configuration: root level="INFO"
@@ -506,11 +506,11 @@ comment the configuration: appender-ref ref="ASYNC"</p>
   ]
 </code></pre></div>
 <h2 id="compile-and-build">Compile and Build<a class="headerlink" href="#compile-and-build" title="Permanent link">&para;</a></h2>
-<h3 id="java-tron-build-failed-with-unit-test-issue">java-tron build failed with unit test issue<a class="headerlink" href="#java-tron-build-failed-with-unit-test-issue" title="Permanent link">&para;</a></h3>
+<h3 id="java-lite-build-failed-with-unit-test-issue">java-lite build failed with unit test issue<a class="headerlink" href="#java-lite-build-failed-with-unit-test-issue" title="Permanent link">&para;</a></h3>
 <p>Please use './gradlew build -x test' to skip the test cases.</p>
 <h2 id="deployment">Deployment<a class="headerlink" href="#deployment" title="Permanent link">&para;</a></h2>
 <h3 id="how-to-test-if-the-deployment-works-normally-if-there-is-a-test-api-or-command-like-redis-get-ping-return-pong">How to test if the deployment works normally, if there is a test api or command like redis: get ping return pong?<a class="headerlink" href="#how-to-test-if-the-deployment-works-normally-if-there-is-a-test-api-or-command-like-redis-get-ping-return-pong" title="Permanent link">&para;</a></h3>
-<p>Java-tron does not provide a default api to test. Once the service start, grpc commands can be sent. Based on that, there are several ways to test if the deployment is successful. You can also use the following command to test:</p>
+<p>Java-lite does not provide a default api to test. Once the service start, grpc commands can be sent. Based on that, there are several ways to test if the deployment is successful. You can also use the following command to test:</p>
 <div class="highlight"><pre><span></span><code>&gt; tail -f logs/tron.log |grep &quot;MyheadBlockNumber&quot;
 </code></pre></div>
 <h3 id="when-to-deploy-private-environment-whats-the-relationship-of-supernode-and-fullnode-should-i-firstly-deploy-a-supernode-and-then-deploy-a-fullnode">When to deploy private environment, what's the relationship of SuperNode and FullNode? Should I firstly deploy a SuperNode, and then deploy a FullNode？<a class="headerlink" href="#when-to-deploy-private-environment-whats-the-relationship-of-supernode-and-fullnode-should-i-firstly-deploy-a-supernode-and-then-deploy-a-fullnode" title="Permanent link">&para;</a></h3>
@@ -535,7 +535,7 @@ comment the configuration: appender-ref ref="ASYNC"</p>
 <h3 id="does-a-node-have-wallet-function">Does a node have wallet function?<a class="headerlink" href="#does-a-node-have-wallet-function" title="Permanent link">&para;</a></h3>
 <p>No, but the node provides wallet rpc api.</p>
 <h3 id="why-does-the-block-process-time-take-so-long">Why does the block process time take so long?<a class="headerlink" href="#why-does-the-block-process-time-take-so-long" title="Permanent link">&para;</a></h3>
-<p>Java-tron need more RAM to process transactions.</p>
+<p>Java-lite need more RAM to process transactions.</p>
 <h2 id="test-net">Test Net<a class="headerlink" href="#test-net" title="Permanent link">&para;</a></h2>
 <h3 id="we-want-to-test-our-supernodes-performance-under-test-environment-do-we-need-to-be-voted-to-become-a-sr-under-test-environment">We want to test our SuperNode's performance under test environment, do we need to be voted to become a SR under test environment?<a class="headerlink" href="#we-want-to-test-our-supernodes-performance-under-test-environment-do-we-need-to-be-voted-to-become-a-sr-under-test-environment" title="Permanent link">&para;</a></h3>
 <p>Yes. Under test environment, we can vote you to become SR.</p>
@@ -571,7 +571,7 @@ comment the configuration: appender-ref ref="ASYNC"</p>
 <h2 id="my-question-is-not-listed-here">My Question is Not Listed Here?<a class="headerlink" href="#my-question-is-not-listed-here" title="Permanent link">&para;</a></h2>
 <p>Feel free to join our community, just open an Issue on github:</p>
 <ul>
-<li>Github: <a href="https://github.com/liteprotocol/java-tron">tronprotocol/java-tron</a></li>
+<li>Github: <a href="https://github.com/liteprotocol/java-lite">tronprotocol/java-lite</a></li>
 </ul>
               
             </div>

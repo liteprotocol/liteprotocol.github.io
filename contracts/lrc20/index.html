@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>TRC-20 - LITE Documentation</title>
+  <title>LRC-20 - LITE Documentation</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -17,9 +17,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "TRC-20";
-    var mkdocs_page_input_path = "contracts/trc20.md";
-    var mkdocs_page_url = "/documentation-en/contracts/trc20/";
+    var mkdocs_page_name = "LRC-20";
+    var mkdocs_page_input_path = "contracts/lrc20.md";
+    var mkdocs_page_url = "/documentation-en/contracts/lrc20/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js" defer></script>
@@ -163,10 +163,10 @@
                 </li>
                 <li class=" current">
                     
-    <a class="current" href="./">TRC-20</a>
+    <a class="current" href="./">LRC-20</a>
     <ul class="subnav">
             
-    <li class="toctree-l3"><a href="#trc-20">TRC-20</a></li>
+    <li class="toctree-l3"><a href="#trc-20">LRC-20</a></li>
     
         <ul>
         
@@ -216,7 +216,7 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../../developers/java-tron/">Java-Lite</a>
+    <a class="" href="../../developers/java-lite/">Java-Lite</a>
                 </li>
                 <li class="">
                     
@@ -243,7 +243,7 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../../clients/tron-grid/">LiteGrid</a>
+    <a class="" href="../../clients/lite-grid/">LiteGrid</a>
                 </li>
     </ul>
 	    </li>
@@ -295,10 +295,10 @@
         
       
     
-    <li>TRC-20</li>
+    <li>LRC-20</li>
     <li class="wy-breadcrumbs-aside">
       
-        <a href="https://github.com/liteprotocol/liteprotocol.github.io/edit/master/docs/contracts/trc20.md"
+        <a href="https://github.com/liteprotocol/liteprotocol.github.io/edit/master/docs/contracts/lrc20.md"
           class="icon icon-github"> Edit on GitHub</a>
       
     </li>
@@ -308,7 +308,7 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="trc-20">TRC-20<a class="headerlink" href="#trc-20" title="Permanent link">&para;</a></h1>
+                <h1 id="trc-20">LRC-20<a class="headerlink" href="#trc-20" title="Permanent link">&para;</a></h1>
 <p>TRC‌-20 is a technical standard used for smart contracts on the LITE blockchain for implementing tokens with the LITE Virtual Machine (TVM). It is fully compatible to ERC‌-20.</p>
 <h2 id="implementation-rules">Implementation Rules<a class="headerlink" href="#implementation-rules" title="Permanent link">&para;</a></h2>
 <p><strong>3 Optional Items</strong></p>
@@ -328,7 +328,7 @@
 <div class="highlight"><pre><span></span><code>uint8 public constant decimals = 6;
 </code></pre></div>
 <p><strong>6 Required Items</strong></p>
-<div class="highlight"><pre><span></span><code>contract TRC20 {
+<div class="highlight"><pre><span></span><code>contract LRC20 {
     function totalSupply() constant returns (uint theTotalSupply);
     function balanceOf(address _owner) constant returns (uint balance);
     function transfer(address _to, uint _value) returns (bool success);
@@ -375,7 +375,7 @@
 
 interface tokenRecipient { function receiveApproval(address _from, uint256 _value, address _token, bytes _extraData) external; }
 
-contract TokenTRC20 {
+contract TokenLRC20 {
     // Public variables of the token
     string public name;
     string public symbol;
@@ -398,7 +398,7 @@ contract TokenTRC20 {
      *
      * Initializes contract with initial supply tokens to the creator of the contract
      */
-    function TokenTRC20(
+    function TokenLRC20(
         uint256 initialSupply,
         string tokenName,
         string tokenSymbol
