@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Resource Model - TRON Documentation</title>
+  <title>Resource Model - LITE Documentation</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -36,7 +36,7 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href="../.." class="icon icon-home"> TRON Documentation</a>
+        <a href="../.." class="icon icon-home"> LITE Documentation</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
@@ -285,7 +285,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../..">TRON Documentation</a>
+        <a href="../..">LITE Documentation</a>
       </nav>
 
       
@@ -316,8 +316,8 @@
               
                 <h1 id="resource-model">Resource Model<a class="headerlink" href="#resource-model" title="Permanent link">&para;</a></h1>
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
-<p>TRON network has 4 types of resources: Bandwidth, CPU, Storage and RAM. Benefit by TRON's exclusive RAM model, TRON's RAM resource is almost infinite.</p>
-<p>TRON network imports two resource conceptions: Bandwidth points and Energy. Bandwidth Point represents Bandwidth, Energy represents CPU and Storage.</p>
+<p>LITE network has 4 types of resources: Bandwidth, CPU, Storage and RAM. Benefit by LITE's exclusive RAM model, LITE's RAM resource is almost infinite.</p>
+<p>LITE network imports two resource conceptions: Bandwidth points and Energy. Bandwidth Point represents Bandwidth, Energy represents CPU and Storage.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <ul>
@@ -376,7 +376,7 @@ U^\prime = ( 1 - \frac{T_2 - T_1}{24h} ) * U + u
 <p>Example (Using wallet-cli):</p>
 <div class="highlight"><pre><span></span><code>freezeBalance frozen_balance frozen_duration [ResourceCode:0 BANDWIDTH,1 ENERGY]
 </code></pre></div>
-<p>Freeze TRX to get energy, energy obtained = user's TRX frozen amount / total amount of frozen TRX in TRON * 50_000_000_000.</p>
+<p>Freeze TRX to get energy, energy obtained = user's TRX frozen amount / total amount of frozen TRX in LITE * 50_000_000_000.</p>
 <p>Example:</p>
 <div class="highlight"><pre><span></span><code>If there are only two users, A freezes 2 TRX, B freezes 2 TRX
 the energy they can get is:
@@ -483,7 +483,7 @@ if (X + Y) / 40% &lt; Z / 60%, the energy A can use is (X + Y) / 40%</p>
 <p>Assert-style error introduction, refer to <a href="https://github.com/tronprotocol/Documentation/blob/master/%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/%E8%99%9A%E6%8B%9F%E6%9C%BA/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86.md">Exception Handling(zh-cn)</a>.</p>
 <p>To avoid unnecessary lost, 10 - 100 is recommended for consume_user_resource_percent.</p>
 <h2 id="resource-delegation">Resource Delegation<a class="headerlink" href="#resource-delegation" title="Permanent link">&para;</a></h2>
-<p>In TRON network, an account can freeze TRX for Bandwidth or Energy for other accounts. The primary account owns the frozen TRX and TRON power, the recipient account owns the Bandwidth or Energy. Like ordinary freezing, resource delegation freezing is also at least 3 days.</p>
+<p>In LITE network, an account can freeze TRX for Bandwidth or Energy for other accounts. The primary account owns the frozen TRX and LITE power, the recipient account owns the Bandwidth or Energy. Like ordinary freezing, resource delegation freezing is also at least 3 days.</p>
 <ul>
 <li>Example(Using wallet-cli)
 <div class="highlight"><pre><span></span><code>freezeBalance frozen_balance frozen_duration [ResourceCode:0 BANDWIDTH,1 ENERGY] [receiverAddress]
@@ -528,13 +528,13 @@ receiverAddress: recipient account address
 <p>The energy consumption of each execution may fluctuate slightly due to the situation of all the nodes.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 <li id="fn:2">
-<p>TRON may change this policy.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+<p>LITE may change this policy.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
 </li>
 <li id="fn:3">
 <p>The estimated energy consumption limit for the next execution should be greater than the last one.&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
 </li>
 <li id="fn:4">
-<p>4 TRX = 10^5 energy is a fixed number for burning TRX to get energy, TRON may change it in future.&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+<p>4 TRX = 10^5 energy is a fixed number for burning TRX to get energy, LITE may change it in future.&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>

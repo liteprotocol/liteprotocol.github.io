@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Shielded Transaction - TRON Documentation</title>
+  <title>Shielded Transaction - LITE Documentation</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -36,7 +36,7 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href="../.." class="icon icon-home"> TRON Documentation</a>
+        <a href="../.." class="icon icon-home"> LITE Documentation</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
@@ -277,7 +277,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../..">TRON Documentation</a>
+        <a href="../..">LITE Documentation</a>
       </nav>
 
       
@@ -308,14 +308,14 @@
               
                 <h1 id="shielded-transaction">Shielded Transaction<a class="headerlink" href="#shielded-transaction" title="Permanent link">&para;</a></h1>
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
-<p>TRON shielded transaction uses zk-SNARK(Zero-Knowledge Succinct Non-Interactive Argument of Knowledge) to implement a completely anonymous transaction. TronZ is the name of shielded trc10 token.</p>
+<p>LITE shielded transaction uses zk-SNARK(Zero-Knowledge Succinct Non-Interactive Argument of Knowledge) to implement a completely anonymous transaction. TronZ is the name of shielded trc10 token.</p>
 <p>In shielded transaction of transfering TronZ, the sender and the receiver's address and transfer amount can both be completely confidential.</p>
 <p>In shielded transaction of transfering TronZ, there are two types of address:</p>
 <ul>
 <li>"t-addr" (Transparent Address)</li>
 <li>"z-addr" (Shielded Address)</li>
 </ul>
-<p>"t-addr" address uses TRON account model.
+<p>"t-addr" address uses LITE account model.
 "z-addr" address uses Anonymous account model.</p>
 <p>In shielded transaction of transfering TronZ, there are three types of transfer transaction:
 - From "t-addr" to "z-addr":
@@ -335,7 +335,7 @@ The transaction information of both "t-addr" can be tracked, "z-addr" can not be
 <p>1.&nbsp;The sender can only spend one note in each transfer. The receiver can receive two notes in each transfer at most.</p>
 <p>2.&nbsp;When you transfer from "z-addr" to "t-addr", if no note returns to "z-addr" as a change, it will generate a note of zero value automatically, and send it to a random black hole address.</p>
 <p>3.&nbsp;The fee for each shielded transaction is xx.</p>
-<p>The doc below describes how to use TRON Shielded Transaction with http api.</p>
+<p>The doc below describes how to use LITE Shielded Transaction with http api.</p>
 <h3 id="transfer-from-transparent-address-to-shielded-address">Transfer from transparent address to shielded address<a class="headerlink" href="#transfer-from-transparent-address-to-shielded-address" title="Permanent link">&para;</a></h3>
 <p><strong>Step 1. Call api: wallet/createshieldedtransaction to build the transaction</strong>
 Method: Post
