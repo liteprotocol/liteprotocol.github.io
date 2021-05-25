@@ -230,7 +230,7 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../java-tron/">Java-Tron</a>
+    <a class="" href="../java-tron/">Java-Lite</a>
                 </li>
                 <li class="">
                     
@@ -257,7 +257,7 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../../clients/tron-grid/">TronGrid</a>
+    <a class="" href="../../clients/tron-grid/">LiteGrid</a>
                 </li>
     </ul>
 	    </li>
@@ -349,7 +349,7 @@ New developers should deploy FullNode only.</p>
 ./gradlew build
 </code></pre></div></p>
 <p>2.&nbsp;Copy the FullNode.jar and SolidityNode.jar along with configuration files into the respective directories
-<div class="highlight"><pre><span></span><code>download your needed configuration file from https://github.com/tronprotocol/TronDeployment.
+<div class="highlight"><pre><span></span><code>download your needed configuration file from https://github.com/tronprotocol/LiteDeployment.
 
 main_net_config.conf is the configuration for MainNet, and test_net_config.conf is the configuration for TestNet.
 
@@ -360,7 +360,7 @@ cp build/libs/FullNode.jar ../fullnode
 cp build/libs/SolidityNode.jar ../soliditynode
 </code></pre></div></p>
 <p>3.&nbsp;You can now run your FullNode using the following command
-<div class="highlight"><pre><span></span><code>java -jar FullNode.jar -c config.conf // make sure that your config.conf is downloaded from https://github.com/tronprotocol/TronDeployment
+<div class="highlight"><pre><span></span><code>java -jar FullNode.jar -c config.conf // make sure that your config.conf is downloaded from https://github.com/tronprotocol/LiteDeployment
 </code></pre></div></p>
 <p>4.&nbsp;Configure the SolidityNode configuration file</p>
 <p>You need to edit <code>config.conf</code> to connect to your local FullNode. Change  <code>trustNode</code> in <code>node</code> to local <code>127.0.0.1:50051</code>, which is the default rpc port. Set <code>listen.port</code> to any number within the range of 1024-65535. Please don't use any ports between 0-1024 since you'll most likely hit conflicts with other system services. Also change <code>rpc port</code> to <code>50052</code> or something to avoid conflicts. <strong>Please forward the UDP port 18888 for FullNode.</strong>
@@ -369,7 +369,7 @@ cp build/libs/SolidityNode.jar ../soliditynode
     }
 </code></pre></div></p>
 <p>5.&nbsp;You can now run your SolidityNode using the following command：
-<div class="highlight"><pre><span></span><code>java -jar SolidityNode.jar -c config.conf //make sure that your config.conf is downloaded from https://github.com/tronprotocol/TronDeployment
+<div class="highlight"><pre><span></span><code>java -jar SolidityNode.jar -c config.conf //make sure that your config.conf is downloaded from https://github.com/tronprotocol/LiteDeployment
 </code></pre></div></p>
 <p>6.&nbsp;Running a Super Representative Node for mainnet
 <div class="highlight"><pre><span></span><code>java -jar FullNode.jar -p your private key --witness -c your config.conf(Example：/data/java-tron/config.conf)
@@ -423,7 +423,7 @@ done
 Just Support FullNode and SolidityNode.</p>
 <h3>Download and run script</h3>
 
-<div class="highlight"><pre><span></span><code>wget https://raw.githubusercontent.com/tronprotocol/TronDeployment/master/deploy_tron.sh -O deploy_tron.sh
+<div class="highlight"><pre><span></span><code>wget https://raw.githubusercontent.com/tronprotocol/LiteDeployment/master/deploy_tron.sh -O deploy_tron.sh
 </code></pre></div>
 <h3>Parameter Illustration</h3>
 
@@ -441,19 +441,19 @@ Just Support FullNode and SolidityNode.</p>
 </code></pre></div>
 <h3> Deployment of FullNode on the one host </h3>
 
-<div class="highlight"><pre><span></span><code>wget https://raw.githubusercontent.com/tronprotocol/TronDeployment/master/deploy_tron.sh -O deploy_tron.sh
+<div class="highlight"><pre><span></span><code>wget https://raw.githubusercontent.com/tronprotocol/LiteDeployment/master/deploy_tron.sh -O deploy_tron.sh
 bash deploy_tron.sh
 </code></pre></div>
 <h3> Deployment of SolidityNode on the one host </h3>
 
-<div class="highlight"><pre><span></span><code>wget https://raw.githubusercontent.com/tronprotocol/TronDeployment/master/deploy_tron.sh -O deploy_tron.sh
+<div class="highlight"><pre><span></span><code>wget https://raw.githubusercontent.com/tronprotocol/LiteDeployment/master/deploy_tron.sh -O deploy_tron.sh
 <span class="c1"># User can self-configure the IP and Port of GRPC service in the turst-node field of SolidityNode. trust-node is the fullnode you just deploy.</span>
 bash deploy_tron.sh --app SolidityNode --trust-node &lt;grpc-ip:grpc-port&gt;
 </code></pre></div>
 <h3> Deployment of FullNode and SolidityNode on the same host </h3>
 
 <div class="highlight"><pre><span></span><code><span class="c1"># You need to configure different gRPC ports on the same host because gRPC port is available on SolidityNode and FullNodeConfigure and it cannot be set as default value 50051. In this case the default value of rpc port is set as 50041.</span>
-wget https://raw.githubusercontent.com/tronprotocol/TronDeployment/master/deploy_tron.sh -O deploy_tron.sh
+wget https://raw.githubusercontent.com/tronprotocol/LiteDeployment/master/deploy_tron.sh -O deploy_tron.sh
 bash deploy_tron.sh --app FullNode
 bash deploy_tron.sh --app SolidityNode --rpc-port <span class="m">50041</span>
 </code></pre></div>
@@ -467,7 +467,7 @@ bash deploy_tron.sh --app SolidityNode --rpc-port <span class="m">50041</span>
 Install Golang, Protoc, and set $GOPATH environment variable according to your requirement.</p>
 <h3> Download and run script </h3>
 
-<div class="highlight"><pre><span></span><code>wget https://raw.githubusercontent.com/tronprotocol/TronDeployment/master/deploy_grpc_gateway.sh -O deploy_grpc_gateway.sh
+<div class="highlight"><pre><span></span><code>wget https://raw.githubusercontent.com/tronprotocol/LiteDeployment/master/deploy_grpc_gateway.sh -O deploy_grpc_gateway.sh
 </code></pre></div>
 <h3> Parameter Illustration </h3>
 
@@ -486,7 +486,7 @@ Use customized configuration：
 <div class="highlight"><pre><span></span><code>bash deploy_grpc_gateway.sh --rpchost <span class="m">127</span>.0.0.1 --rpcport <span class="m">50052</span> --httpport <span class="m">18891</span>
 </code></pre></div></p>
 <h2 id="event-subscribe-plugin-deployment">Event Subscribe plugin Deployment<a class="headerlink" href="#event-subscribe-plugin-deployment" title="Permanent link">&para;</a></h2>
-<p>This is an implementation of Tron eventsubscribe model.</p>
+<p>This is an implementation of Lite eventsubscribe model.</p>
 <ul>
 <li><strong>api</strong> module defines IPluginEventListener, a protocol between Java-tron and event plugin.</li>
 <li><strong>app</strong> module is an example for loading plugin, developers could use it for debugging.</li>

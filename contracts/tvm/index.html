@@ -220,7 +220,7 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../../developers/java-tron/">Java-Tron</a>
+    <a class="" href="../../developers/java-tron/">Java-Lite</a>
                 </li>
                 <li class="">
                     
@@ -247,7 +247,7 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../../clients/tron-grid/">TronGrid</a>
+    <a class="" href="../../clients/tron-grid/">LiteGrid</a>
                 </li>
     </ul>
 	    </li>
@@ -325,7 +325,7 @@
 <p>Currently, TVM is compatible with EVM and will be with more mainstream VMs in the future. Thereby, all smart contracts on EVM are executable on TVM. By connecting seamlessly to existing development ecosystem, higher efficiency can be achieved by developers. Needless to learn a new programming language, they can use mainstream programming languages for smart contract such as Solidity to develop, debug and compile smart contracts in the Remix environment, which greatly reduces development costs.</p>
 <p>4.&nbsp;Developer-friendly</p>
 <p>Thanks to TVM’s bandwidth setup, developments costs are reduced and developers can focus on the logic of their contract code. TVM also offers all-in-one interfaces for contract deployment, triggering and viewing, for the convenience of developers.
-The following interfaces are available in Tron Wallet-CLI:</p>
+The following interfaces are available in Lite Wallet-CLI:</p>
 <ul>
 <li>deploycontract(password, contractAddress, ABI, code, data, value)</li>
 <li>triggercontract(password, contractAddress, selector, data, value)</li>
@@ -333,27 +333,27 @@ The following interfaces are available in Tron Wallet-CLI:</p>
 Developers can call these interfaces to deploy, trigger or check smart contracts.</li>
 </ul>
 <h2 id="how-tvm-works">How TVM Works<a class="headerlink" href="#how-tvm-works" title="Permanent link">&para;</a></h2>
-<p><img alt="Flowchart of Tron Virtual Machine" src="https://raw.githubusercontent.com/tronprotocol/documentation/master/images/Virtual_Machine/虚拟机.png" /></p>
+<p><img alt="Flowchart of Lite Virtual Machine" src="https://raw.githubusercontent.com/tronprotocol/documentation/master/images/Virtual_Machine/虚拟机.png" /></p>
 <p>The above flowchart shows how TVM works:
-Compilation of Tron smart contract→execution and computing engines of VM→Interoperation service layer for external interfaces.</p>
+Compilation of Lite smart contract→execution and computing engines of VM→Interoperation service layer for external interfaces.</p>
 <p>Put simply, the flow is as follows:
 + Currently, TVM is compatible mainly with Solidity. The compiler translates Solidity smart contract into bytecode readable and executable on TVM.
 + A virtual machine processes data through opcode, which is equivalent to operating a logic of a stack-based finite state machine.
 + TVM accesses blockchain data and invoke External Data Interface through the Interoperation layer.</p>
 <h2 id="future-development-of-tvm">Future Development of TVM<a class="headerlink" href="#future-development-of-tvm" title="Permanent link">&para;</a></h2>
 <p>1.&nbsp;More developer-friendly debugging tools</p>
-<p>Tron will be committed to the development of optimized debugging tools and the establishment of standardized symbol and data format, for improved developer efficiency.</p>
+<p>Lite will be committed to the development of optimized debugging tools and the establishment of standardized symbol and data format, for improved developer efficiency.</p>
 <p>2.&nbsp;Fulfillment of diversified processing demands</p>
 <p>Different from gas consumption mechanism for every transaction on EVM, there is no charge on TVM. Each operation only occupies bandwidth, which will be released within a certain amount of time after completion of transaction. It takes developers very little to develop smart contracts with more complex logic. It is our belief that besides being used for digital asset transactions, smart contracts could also be suitably applied to areas such as game development, financial risk modeling and scientific computing. The design of TVM inherently supports multi-scenario tasks, and further optimizations of processing speed, response time, and floating point compatibility.</p>
 <p>3.&nbsp;Improvement of Just-In-Time (JIT) compilation speed and integration of WebAssembly</p>
-<p>Improving JIT compilation speed is conducive to faster interpretation and optimized compilation of local code. Meanwhile, Tron is planning to further optimize its TVM based on WebAssembly (WASM). WebAssembly, spearheaded by Apple, Google, Microsoft and Mozilla, is designed to break bottlenecks of current Web browsers and can be generated through compiling C/C++ and other programming languages. Integrating WASM, TVM will be able to provide high performance and high throughput for blockchain to cope with complex scenarios.</p>
+<p>Improving JIT compilation speed is conducive to faster interpretation and optimized compilation of local code. Meanwhile, Lite is planning to further optimize its TVM based on WebAssembly (WASM). WebAssembly, spearheaded by Apple, Google, Microsoft and Mozilla, is designed to break bottlenecks of current Web browsers and can be generated through compiling C/C++ and other programming languages. Integrating WASM, TVM will be able to provide high performance and high throughput for blockchain to cope with complex scenarios.</p>
 <h2 id="usage-guide-to-tvm">Usage Guide to TVM<a class="headerlink" href="#usage-guide-to-tvm" title="Permanent link">&para;</a></h2>
 <p>1.&nbsp;Compile contract</p>
 <p>Contract compilation address: <a href="https://remix.ethereum.org">https://remix.ethereum.org</a></p>
 <p>2.&nbsp;Get ABI and bytecode
 <div class="highlight"><pre><span></span><code>pragma solidity^0.4.11;
 
-    contract Tron {
+    contract Lite {
             uint256 tron;
             constructor() public { }
 
@@ -372,7 +372,7 @@ Compilation of Tron smart contract→execution and computing engines of VM→Int
 <p>Wallet-cli-vm branch: <a href="https://github.com/tronprotocol/wallet-cli/tree/wallet-cli-vm">https://github.com/tronprotocol/wallet-cli/tree/wallet-cli-vm</a>
 Java-tron-vm branch: <a href="https://github.com/tronprotocol/java-tron/tree/develop_vm">https://github.com/tronprotocol/java-tron/tree/develop_vm</a>
 Password: password of client-end wallet
-ContractAddress: customized contract address (in Tron’s required format)
+ContractAddress: customized contract address (in Lite’s required format)
 ABI: interface description
 Data: parameters of the initial function
 Value: reserved field
@@ -385,7 +385,7 @@ triggercontract(Password, ContractAddress, Selector, Data, Value)</p>
 <div class="highlight"><pre><span></span><code>    getcontract(ContractAddress)
 </code></pre></div>
 
-The above is an introduction of Tron Virtual Machine and a guide to deployment. We welcome everyone to check out TVM and give us your thoughts and suggestions. We will continue to perfect and update TVM for optimal performance on LITE mainnet.</p>
+The above is an introduction of Lite Virtual Machine and a guide to deployment. We welcome everyone to check out TVM and give us your thoughts and suggestions. We will continue to perfect and update TVM for optimal performance on LITE mainnet.</p>
               
             </div>
           </div>

@@ -244,7 +244,7 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../../developers/java-tron/">Java-Tron</a>
+    <a class="" href="../../developers/java-tron/">Java-Lite</a>
                 </li>
                 <li class="">
                     
@@ -271,7 +271,7 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../../clients/tron-grid/">TronGrid</a>
+    <a class="" href="../../clients/tron-grid/">LiteGrid</a>
                 </li>
     </ul>
 	    </li>
@@ -343,9 +343,9 @@
 <a href="https://github.com/tronprotocol/protocol">protocol</a> is the definition of the api and data structure.
 <a href="https://github.com/tronprotocol/wallet-cli">wallet-cli</a> is the official command line wallet.</p>
 <p>MainNet Configuration:
-<a href="https://github.com/tronprotocol/TronDeployment/blob/master/main_net_config.conf">https://github.com/tronprotocol/TronDeployment/blob/master/main_net_config.conf</a>
+<a href="https://github.com/tronprotocol/LiteDeployment/blob/master/main_net_config.conf">https://github.com/tronprotocol/LiteDeployment/blob/master/main_net_config.conf</a>
 TestNet Configuration:
-<a href="https://github.com/tronprotocol/TronDeployment/blob/master/test_net_config.conf">https://github.com/tronprotocol/TronDeployment/blob/master/test_net_config.conf</a></p>
+<a href="https://github.com/tronprotocol/LiteDeployment/blob/master/test_net_config.conf">https://github.com/tronprotocol/LiteDeployment/blob/master/test_net_config.conf</a></p>
 <h1 id="2-srs-and-committee">2. SRs and Committee<a class="headerlink" href="#2-srs-and-committee" title="Permanent link">&para;</a></h1>
 <h2> 2.1 How to Become a Super Representative </h2>
 
@@ -426,7 +426,7 @@ id: proposal id
 <li>Query all the proposals list by pagination (GetPaginatedProposalList)</li>
 <li>Query a proposal by proposal id (GetProposalById)</li>
 </ul>
-<p>For more api detail, please refer to <a href="../../api/http/">Tron HTTP API</a></p>
+<p>For more api detail, please refer to <a href="../../api/http/">Lite HTTP API</a></p>
 <h1 id="3-account-model">3. Account Model<a class="headerlink" href="#3-account-model" title="Permanent link">&para;</a></h1>
 <h2> 3.1 Introduction </h2>
 
@@ -436,7 +436,7 @@ id: proposal id
 <p>1.&nbsp;Use a wallet to generate the address and private key. To activate the account, you need to transfer TRX or transfer token to the new created account. <a href="https://tronscan.org/#/wallet/new">generate an account</a></p>
 <p>2.&nbsp;Use an account already existed in LITE network to create an account</p>
 <h2> 3.3 Key-pair Generation Algorithm </h2>
-<p>Tron signature algorithm is ECDSA, curve used is SECP256K1. Private key is a random bumber, public key is a point in the elliptic curve. The process is: first generate a random number d to be the private key, then calculate P = d * G as the public key, G is the elliptic curve base point.</p>
+<p>Lite signature algorithm is ECDSA, curve used is SECP256K1. Private key is a random bumber, public key is a point in the elliptic curve. The process is: first generate a random number d to be the private key, then calculate P = d * G as the public key, G is the elliptic curve base point.</p>
 <h2> 3.4 Address Format </h2>
 <p>Use the public key P as the input, by SHA3 get the result H. The length of the public key is 64 bytes, SHA3 uses Keccak256. Use the last 20 bytes of H, and add a byte of 0x41 in front of it, then the address comes out. Do basecheck to address, here is the final address. All addresses start with 'T'.</p>
 <p>basecheck process: first do sha256 calculation to address to get h1, then do sha256 to h1 to get h2, use the first 4 bytes as check to add it to the end of the address to get address||check, do base58 encode to address||check to get the final result.</p>
@@ -710,7 +710,7 @@ Note: Different from creating a contract by grpc's deploycontract, contract crea
      *  @return Solidity address type
 */
 
-function convertFromTronInt(uint256 tronAddress) public view returns(address){
+function convertFromLiteInt(uint256 tronAddress) public view returns(address){
         return address(tronAddress);
 }
 </code></pre></div>
@@ -857,23 +857,23 @@ if (X + Y) / 40% &lt; Z / 60%, the energy A can use is (X + Y) / 40%</p>
 <p>To avoid unnecessary lost, 10 - 100 is recommended for consume_user_resource_percent.</p>
 <h2> 5.4 Smart Contract Development Tool </h2>
 
-<h3> 5.4.1 TronStudio </h3>
+<h3> 5.4.1 LiteStudio </h3>
 
 <p>Support the build, debug, run, etc. for solidity language written smart contract.
 <a href="https://developers.tron.network/docs/tron-studio-intro">https://developers.tron.network/docs/tron-studio-intro</a></p>
-<h3> 5.4.2 TronBox </h3>
+<h3> 5.4.2 LiteBox </h3>
 
 <p>Support the build, deploy, transplant, etc. for solidity language written smart contract.
 <a href="https://developers.tron.network/docs/tron-box-user-guide">https://developers.tron.network/docs/tron-box-user-guide</a></p>
-<h3> 5.4.3 TronWeb </h3>
+<h3> 5.4.3 LiteWeb </h3>
 <p>Provide http api service for the usage of smart contract.
 <a href="https://developers.tron.network/docs/tron-web-intro">https://developers.tron.network/docs/tron-web-intro</a></p>
-<h3> 5.4.4 TronGrid </h3>
+<h3> 5.4.4 LiteGrid </h3>
 <p>Provide smart contract event query service.
 <a href="https://developers.tron.network/docs/tron-grid-intro">https://developers.tron.network/docs/tron-grid-intro</a></p>
 <h2> 5.5 Using Command Lines Tool to Develop Smart Contract </h2>
 
-<p>First you can use TronStudio to write, build and debug the smart contract. After you finish the development of the contract, you can copy it to <a href="https://github.com/tronprotocol/tron-demo/tree/master/SmartContractTools/SimpleWebCompiler">SimpleWebCompiler</a> to compile to get ABI and ByteCode. We provide a simple data read/write smart contract code example to demonstrate:</p>
+<p>First you can use LiteStudio to write, build and debug the smart contract. After you finish the development of the contract, you can copy it to <a href="https://github.com/tronprotocol/tron-demo/tree/master/SmartContractTools/SimpleWebCompiler">SimpleWebCompiler</a> to compile to get ABI and ByteCode. We provide a simple data read/write smart contract code example to demonstrate:</p>
 <div class="highlight"><pre><span></span><code>pragma solidity ^0.4.0;
 contract DataStore {
 
@@ -979,7 +979,7 @@ When you deploy, you need to use browser/oneLibrary.sol.Math3:TSEJ29gnBkxQZR3oDd
 <a href="https://github.com/tronprotocol/Documentation/blob/master/%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/%E6%B3%A2%E5%9C%BA%E5%8D%8F%E8%AE%AE/%E6%B3%A2%E5%9C%BA%E9%92%B1%E5%8C%85RPC-API.md">https://github.com/tronprotocol/Documentation/blob/master/%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/%E6%B3%A2%E5%9C%BA%E5%8D%8F%E8%AE%AE/%E6%B3%A2%E5%9C%BA%E9%92%B1%E5%8C%85RPC-API.md</a></p>
 <h2> 6.3 Http API Introduction </h2>
 <p>Please refer to:
-<a href="https://github.com/tronprotocol/Documentation/blob/master/TRX_CN/Tron-http.md">https://github.com/tronprotocol/Documentation/blob/master/TRX_CN/Tron-http.md</a></p>
+<a href="https://github.com/tronprotocol/Documentation/blob/master/TRX_CN/Lite-http.md">https://github.com/tronprotocol/Documentation/blob/master/TRX_CN/Lite-http.md</a></p>
 <h1 id="7-trc-10-token-introduction">7. TRC-10 Token Introduction<a class="headerlink" href="#7-trc-10-token-introduction" title="Permanent link">&para;</a></h1>
 <p>LITE network support two types of token, one is TRC-20 token issued by smart contract, the other one is TRC-10 token issued by system contract.</p>
 <h2> 7.1 How to Issue a TRC-10 Token </h2>
@@ -1136,19 +1136,19 @@ receiverAddress: recipient account address
 <h2> 9.2 Exchange Pair Creation </h2>
 <p>Any account can create an exchange pair, it burns 1024 TRX.</p>
 <p>Please refer to 'wallet/exchangecreate':
-<a href="https://github.com/tronprotocol/documentation/blob/master/TRX/Tron-http.md">https://github.com/tronprotocol/documentation/blob/master/TRX/Tron-http.md</a></p>
+<a href="https://github.com/tronprotocol/documentation/blob/master/TRX/Lite-http.md">https://github.com/tronprotocol/documentation/blob/master/TRX/Lite-http.md</a></p>
 <h2> 9.3 Exchange Pair Transaction </h2>
 <p>Any account can trade in the DEX. The trade follows Bancor protocol.</p>
 <p>Please refer to 'wallet/exchangetransaction':
-<a href="https://github.com/tronprotocol/documentation/blob/master/TRX/Tron-http.md">https://github.com/tronprotocol/documentation/blob/master/TRX/Tron-http.md</a></p>
+<a href="https://github.com/tronprotocol/documentation/blob/master/TRX/Lite-http.md">https://github.com/tronprotocol/documentation/blob/master/TRX/Lite-http.md</a></p>
 <h2> 9.4 Exchange Pair Injection </h2>
 <p>The exchange pair creator can inject more tokens into the exchange pair. Injection can decrease the range of ratio fluctuation. If one token is injected, the other one will be injected automatically to keep the current ratio of the two tokens unchanged.</p>
 <p>Please refer to 'wallet/exchangeinject':
-<a href="https://github.com/tronprotocol/documentation/blob/master/TRX/Tron-http.md">https://github.com/tronprotocol/documentation/blob/master/TRX/Tron-http.md</a></p>
+<a href="https://github.com/tronprotocol/documentation/blob/master/TRX/Lite-http.md">https://github.com/tronprotocol/documentation/blob/master/TRX/Lite-http.md</a></p>
 <h2> 9.5 Exchange Pair Withdrawal </h2>
 <p>The exchange pair creator can withdraw tokens from the exchange pair. Withdrawal can increase the range of ratio fluctuation. If one token is withdrawn, the other one will be withdrawn automatically to keep the current ratio of the two tokens unchanged.</p>
 <p>Please refer to 'wallet/exchangewithdraw':
-<a href="https://github.com/tronprotocol/documentation/blob/master/TRX/Tron-http.md">https://github.com/tronprotocol/documentation/blob/master/TRX/Tron-http.md)</a></p>
+<a href="https://github.com/tronprotocol/documentation/blob/master/TRX/Lite-http.md">https://github.com/tronprotocol/documentation/blob/master/TRX/Lite-http.md)</a></p>
 <h2> 9.6 Query </h2>
 
 <h3> 9.6.1 Transaction Query </h3>
@@ -1156,7 +1156,7 @@ receiverAddress: recipient account address
 GetPaginatedExchangeList: Query the list of all the exchange pairs by pagination
 GetExchangeById: Query an exchange pair by exchange pair id</p>
 <p>Please refer to:
-<a href="https://github.com/tronprotocol/documentation/blob/master/TRX/Tron-http.md">https://github.com/tronprotocol/documentation/blob/master/TRX/Tron-http.md</a></p>
+<a href="https://github.com/tronprotocol/documentation/blob/master/TRX/Lite-http.md">https://github.com/tronprotocol/documentation/blob/master/TRX/Lite-http.md</a></p>
 <h3> 9.6.2 Price Calculation </h3>
 <p>The token price is determined by the ratio of the balance of the two tokens.</p>
 <h3> 9.6.3 Calculate the Amount of Token You Can Get </h3>

@@ -202,7 +202,7 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../developers/java-tron/">Java-Tron</a>
+    <a class="" href="../developers/java-tron/">Java-Lite</a>
                 </li>
                 <li class="">
                     
@@ -229,7 +229,7 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../clients/tron-grid/">TronGrid</a>
+    <a class="" href="../clients/tron-grid/">LiteGrid</a>
                 </li>
     </ul>
 	    </li>
@@ -350,7 +350,7 @@
 </ul>
 </li>
 <li><a href="#node-configuration">Node Configuration</a><ul>
-<li><a href="#if-i-replace-the-field-value-of-genesisblockwitnesses-with-the-address-generated-in-tronscan-in-configconf-do-i-need-to-delete-other-addresses-do-i-need-to-delete-the-field-url-and-votecount">If I replace the field value of 'genesis.block.witnesses' with the address generated in Tronscan in config.conf, do I need to delete other addresses? Do I need to delete the field 'url' and 'voteCount'?</a></li>
+<li><a href="#if-i-replace-the-field-value-of-genesisblockwitnesses-with-the-address-generated-in-tronscan-in-configconf-do-i-need-to-delete-other-addresses-do-i-need-to-delete-the-field-url-and-votecount">If I replace the field value of 'genesis.block.witnesses' with the address generated in Litescan in config.conf, do I need to delete other addresses? Do I need to delete the field 'url' and 'voteCount'?</a></li>
 <li><a href="#how-can-i-specify-the-data-storage-path-when-start-a-node">How can I specify the data storage path when start a node?</a></li>
 <li><a href="#is-there-any-config-file-option-which-i-can-use-for-sending-logs-to-stdout">Is there any config file option, which I can use for sending logs to stdout?</a></li>
 <li><a href="#how-to-change-log-level">How to change log level</a></li>
@@ -386,7 +386,7 @@
 <li><a href="#smart-contract">Smart Contract</a></li>
 <li><a href="#rpc-client-and-api">RPC Client and API</a><ul>
 <li><a href="#how-to-sign-transaction-from-offline-node-and-broadcast-to-online-node">How to sign transaction from offline node and broadcast to online node?</a></li>
-<li><a href="#how-to-sync-wallet-cli-with-wallet-on-tronscan">How to sync wallet-cli with wallet on Tronscan?</a></li>
+<li><a href="#how-to-sync-wallet-cli-with-wallet-on-tronscan">How to sync wallet-cli with wallet on Litescan?</a></li>
 <li><a href="#is-gateway-connected-to-soliditynode">Is gateway connected to SolidityNode？</a></li>
 <li><a href="#what-is-the-different-between-gettransactionbyid-and-gettransactioninfobyid">What is the different between 'getTransactionById' and 'getTransactionInfoById'?</a></li>
 <li><a href="#how-to-broadcast-raw-transaction">How to broadcast raw transaction？</a></li>
@@ -405,13 +405,13 @@
 </div>
 <h2 id="network-design-and-protocol">Network Design and Protocol<a class="headerlink" href="#network-design-and-protocol" title="Permanent link">&para;</a></h2>
 <h3 id="how-can-i-generate-an-account">How can I generate an account?<a class="headerlink" href="#how-can-i-generate-an-account" title="Permanent link">&para;</a></h3>
-<p>You can use <a href="https://github.com/tronprotocol/wallet-cli">wallet-cli</a> or <a href="https://tronscan.org/#/wallet/new">Tronscan</a>.</p>
+<p>You can use <a href="https://github.com/tronprotocol/wallet-cli">wallet-cli</a> or <a href="https://tronscan.org/#/wallet/new">Litescan</a>.</p>
 <h3 id="what-is-the-network-flow">What is the network flow?<a class="headerlink" href="#what-is-the-network-flow" title="Permanent link">&para;</a></h3>
 <p>Network flow depends on transaction volume. As a reference, the average size of a transaction currently is 200 bytes.</p>
 <h3 id="after-you-create-a-token-how-to-change-its-status-from-not-started-yet-to-participate">After you create a token, how to change its status from 'not started yet' to 'participate'?<a class="headerlink" href="#after-you-create-a-token-how-to-change-its-status-from-not-started-yet-to-participate" title="Permanent link">&para;</a></h3>
 <p>You need to wait till the time reaches the start time of participation you set when create a token. After a token is created, only the token url and description can be modified.</p>
 <h3 id="is-there-a-place-to-see-if-all-the-supernodes-are-producing-blocks">Is there a place to see if all the SuperNodes are producing blocks?<a class="headerlink" href="#is-there-a-place-to-see-if-all-the-supernodes-are-producing-blocks" title="Permanent link">&para;</a></h3>
-<p>Please refer to <a href="https://tronscan.org/#/sr/representatives">Tronscan</a></p>
+<p>Please refer to <a href="https://tronscan.org/#/sr/representatives">Litescan</a></p>
 <h3 id="is-the-block-producing-time-interval-always-remain-the-same">Is the block producing time interval always remain the same?<a class="headerlink" href="#is-the-block-producing-time-interval-always-remain-the-same" title="Permanent link">&para;</a></h3>
 <p>The current block producing time interval is 3 seconds. In the future, it may be improved to 1 second.</p>
 <h3 id="will-the-block-producing-reward-reduce-half">Will the block producing reward reduce half?<a class="headerlink" href="#will-the-block-producing-reward-reduce-half" title="Permanent link">&para;</a></h3>
@@ -441,7 +441,7 @@
 <h3 id="how-to-reset-my-vote">How to reset my vote?<a class="headerlink" href="#how-to-reset-my-vote" title="Permanent link">&para;</a></h3>
 <p>You need to vote again, set your votes number to 0.</p>
 <h2 id="node-configuration">Node Configuration<a class="headerlink" href="#node-configuration" title="Permanent link">&para;</a></h2>
-<h3 id="if-i-replace-the-field-value-of-genesisblockwitnesses-with-the-address-generated-in-tronscan-in-configconf-do-i-need-to-delete-other-addresses-do-i-need-to-delete-the-field-url-and-votecount">If I replace the field value of 'genesis.block.witnesses' with the address generated in <a href="https://tronscan.org/">Tronscan</a> in config.conf, do I need to delete other addresses? Do I need to delete the field 'url' and 'voteCount'?<a class="headerlink" href="#if-i-replace-the-field-value-of-genesisblockwitnesses-with-the-address-generated-in-tronscan-in-configconf-do-i-need-to-delete-other-addresses-do-i-need-to-delete-the-field-url-and-votecount" title="Permanent link">&para;</a></h3>
+<h3 id="if-i-replace-the-field-value-of-genesisblockwitnesses-with-the-address-generated-in-tronscan-in-configconf-do-i-need-to-delete-other-addresses-do-i-need-to-delete-the-field-url-and-votecount">If I replace the field value of 'genesis.block.witnesses' with the address generated in <a href="https://tronscan.org/">Litescan</a> in config.conf, do I need to delete other addresses? Do I need to delete the field 'url' and 'voteCount'?<a class="headerlink" href="#if-i-replace-the-field-value-of-genesisblockwitnesses-with-the-address-generated-in-tronscan-in-configconf-do-i-need-to-delete-other-addresses-do-i-need-to-delete-the-field-url-and-votecount" title="Permanent link">&para;</a></h3>
 <p>No need to delete other addresses, these addresses will be a part of your net, but if you do not own the private keys of these addresses, they will act like abandoned addresses.
 Note: The addresses of Zion、Sun and Blackhole can not be deleted, but can be modified.</p>
 <h3 id="how-can-i-specify-the-data-storage-path-when-start-a-node">How can I specify the data storage path when start a node?<a class="headerlink" href="#how-can-i-specify-the-data-storage-path-when-start-a-node" title="Permanent link">&para;</a></h3>
@@ -547,7 +547,7 @@ comment the configuration: appender-ref ref="ASYNC"</p>
 <h2 id="rpc-client-and-api">RPC Client and API<a class="headerlink" href="#rpc-client-and-api" title="Permanent link">&para;</a></h2>
 <h3 id="how-to-sign-transaction-from-offline-node-and-broadcast-to-online-node">How to sign transaction from offline node and broadcast to online node?<a class="headerlink" href="#how-to-sign-transaction-from-offline-node-and-broadcast-to-online-node" title="Permanent link">&para;</a></h3>
 <p>You can use <a href="https://developers.tron.network/docs/api-sign-flow">tronweb</a></p>
-<h3 id="how-to-sync-wallet-cli-with-wallet-on-tronscan">How to sync wallet-cli with wallet on Tronscan?<a class="headerlink" href="#how-to-sync-wallet-cli-with-wallet-on-tronscan" title="Permanent link">&para;</a></h3>
+<h3 id="how-to-sync-wallet-cli-with-wallet-on-tronscan">How to sync wallet-cli with wallet on Litescan?<a class="headerlink" href="#how-to-sync-wallet-cli-with-wallet-on-tronscan" title="Permanent link">&para;</a></h3>
 <p>By using wallet-cli api 'ImportWallet'.</p>
 <h3 id="is-gateway-connected-to-soliditynode">Is gateway connected to SolidityNode？<a class="headerlink" href="#is-gateway-connected-to-soliditynode" title="Permanent link">&para;</a></h3>
 <p>Gateway can connect to SolidityNode and FullNode.</p>
